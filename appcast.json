@@ -1,0 +1,13 @@
+{
+  "latest" : {
+    "minimumSystemVersion" : "11.0",
+    "notes" : "## ✨ Nouveautés\n- **audio** : volume par application avant macOS 14.2 via un pilote audio (#10) (24abe7d)\n\n## 📦 Build\n- **release** : signature Developer ID et notarisation automatiques (c089b4f)\n\n",
+    "publishedAt" : "2026-10-15T17:49:15Z",
+    "sha256" : "2e0a0aad1ffb46b44680d0d69f9c181cf060ae472f09699b9397dae6624e874e",
+    "signature" : "sGv5WrVF6zuO2MvVjCmzS2at9OEzPEBUDzqS4TDq0x+ON56BCEdBxwTqePVXNkz4fKp3ks+axY8cW0XY5AcHBA==",
+    "size" : 2099554,
+    "url" : "https://github.com/thibaultcrn1/soundarr-releases/releases/download/v1.2.0/Soundarr-v1.2.0.zip",
+    "version" : "1.2.0"
+  },
+  "schema" : 1
+}
