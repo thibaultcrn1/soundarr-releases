@@ -1,0 +1,13 @@
+{
+  "latest" : {
+    "minimumSystemVersion" : "11.0",
+    "notes" : "## ✨ Nouveautés\n- **branding** : nouvelle identité visuelle (icône, logo, installateur) (#13) (5fd28c1)\n\n## 🤖 CI\n- **release** : notes de version traduites pour le site (#12) (fe32f1f)\n\n",
+    "publishedAt" : "2026-10-22T19:20:30Z",
+    "sha256" : "8f642210173809efe6eb3da2f46f7c184d875c0a67b565ca19bf17dd58979e88",
+    "signature" : "Whjqewkpi5tIaKBof+BdkPRo8meafQ7pQFzXpB1OUwt4jtuLFlEZEtF+sKQOUhLjX4j1Tem0dyF40nPbg2RTBw==",
+    "size" : 1509542,
+    "url" : "https://github.com/thibaultcrn1/soundarr-releases/releases/download/v1.3.0/Soundarr-v1.3.0.zip",
+    "version" : "1.3.0"
+  },
+  "schema" : 1
+}
