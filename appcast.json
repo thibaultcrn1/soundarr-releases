@@ -1,0 +1,13 @@
+{
+  "latest" : {
+    "minimumSystemVersion" : "11.0",
+    "notes" : "## ✨ Nouveautés\n- **ui** : fenêtre de réglages et interface traduite en 10 langues (#14) (b1b662e)\n\n",
+    "publishedAt" : "2026-11-02T08:06:06Z",
+    "sha256" : "3b40a09d0c22c962ed1d7f4dd1e1b9d35745f1b2add23ccd47daf377024d0a50",
+    "signature" : "AlAryRAKaI1RklufTmCU+jmvikheFPeLK+QJwoYDJhr8VwT5c37V782NlsGoFqpQ9/qGm5V+Y/HTeqnK/CDgDA==",
+    "size" : 1845275,
+    "url" : "https://github.com/thibaultcrn1/soundarr-releases/releases/download/v1.4.0/Soundarr-v1.4.0.zip",
+    "version" : "1.4.0"
+  },
+  "schema" : 1
+}
