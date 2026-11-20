@@ -1,0 +1,13 @@
+{
+  "latest" : {
+    "minimumSystemVersion" : "11.0",
+    "notes" : "## 🐛 Corrections\n- **audio** : le volume par application ne dégrade plus la qualité du son (#17) (869f17a)\n\n## 🤖 CI\n- retire le test de démarrage sur macOS 14, plus proposé par GitHub (#16) (076679a)\n\n",
+    "publishedAt" : "2026-11-20T15:05:56Z",
+    "sha256" : "459112b8336b2690ed1ec46f80399b8e007b9961510625846c3d6ac31d2d3cc5",
+    "signature" : "g9eZ8WJWcA98YrceHcD2gFzg6D3INyff1UDZvBn7is7DNDxN5KvrBMnpn0mFsDVMsxYCY83T8yGZFXDHYmm+Cw==",
+    "size" : 1871917,
+    "url" : "https://github.com/thibaultcrn1/soundarr-releases/releases/download/v1.4.2/Soundarr-v1.4.2.zip",
+    "version" : "1.4.2"
+  },
+  "schema" : 1
+}

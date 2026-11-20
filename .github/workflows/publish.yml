@@ -1,0 +1,46 @@
+name: Publication
+
+# La CI du projet (dépôt privé) pousse sur la branche « incoming » : release.json, notes.md,
+# Soundarr.dmg, Soundarr-vX.Y.Z.zip (signé) et appcast.json. Ce workflow en fait une release publique.
+# Aucun secret ici : la signature est produite en amont et vérifiée par l'app.
+#
+# Source : soundarr/scripts/release/public-repo/publish.yml. GitHub lit le workflow dans la branche poussée :
+# publish-public.sh le joint donc à chaque envoi sur « incoming ».
+on:
+  push:
+    branches: [incoming]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: incoming
+
+      - name: Contrôles
+        run: |
+          version=$(jq -r .version release.json)
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "version invalide : $version"; exit 1; }
+          [[ "$(jq -r .latest.version appcast.json)" == "$version" ]] || { echo "appcast incohérent"; exit 1; }
+          test -s "Soundarr-v$version.zip" && test -s Soundarr.dmg
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "v$VERSION" > /dev/null 2>&1; then
+            echo "v$VERSION déjà publiée" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh release create "v$VERSION" "Soundarr-v$VERSION.zip" Soundarr.dmg appcast.json \
+            --title "Soundarr v$VERSION" --notes-file notes.md --target main --latest
+          echo "Release **v$VERSION** publiée" >> "$GITHUB_STEP_SUMMARY"
